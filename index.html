@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-display {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .fact-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .fact-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crocodile Fun Facts</h1>
+        <div id="fact-display" class="fact-display">Click the button to see a fun fact!</div>
+        <button id="fact-button" class="fact-button">Show Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "The first programmable computer, the Z3, was invented by Konrad Zuse in 1941.",
+            "The Electronic Numerical Integrator and Computer (ENIAC) was the first general-purpose electronic digital computer.",
+            "Gordon Moore predicted that the number of transistors on a microchip would double approximately every two years.",
+            "The term 'computer bug' originated in 1947 when a moth was found causing issues in the Harvard Mark II computer.",
+            "The first website, created by Tim Berners-Lee, went live on August 6, 1991.",
+            "The fastest supercomputer as of 2021 is Fugaku, capable of performing over 442 petaflops.",
+            "The first computers were massive, taking up entire rooms, while modern computers can fit in your pocket.",
+            "The first email was sent by Ray Tomlinson in 1971.",
+            "The concept of AI dates back to the 1950s, with the first AI program written by John McCarthy.",
+            "The first computer game, 'Tennis for Two,' was created in 1958."
+        ];
+
+        document.getElementById('fact-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
